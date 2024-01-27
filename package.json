@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://saranyasidharth.github.io/todoApp/",
+  "homepage": "https://saranyasidharth.github.io/todoApp",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
