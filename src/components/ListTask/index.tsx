@@ -39,7 +39,7 @@ export default function ListTask({
     };
 
     const handleDelete = (index: number) => {
-        const updatedTodoList = todoList.filter((task, i) => i !== index);
+        const updatedTodoList = todoList.filter((_task, i) => i !== index);
         localStorage.setItem("todo", JSON.stringify(updatedTodoList));
         setRefreshList((v: boolean) => !v);
         setOpenIndex(null);
