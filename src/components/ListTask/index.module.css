@@ -1,0 +1,32 @@
+.listTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.deleteIcon {
+    cursor: pointer;
+    align-items: flex-end;
+    /* Align the list section to the right end */
+
+}
+
+.listSection {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding: 0 25%;
+}
+
+.styledModal {
+    position: absolute;
+    top: '50%';
+    left: '50%';
+    transform: 'translate(-50%, -50%)';
+    width: 400;
+    background-color: 'background.paper';
+    border: '2px solid #000';
+    box-shadow: 24;
+    padding: 4;
+}
