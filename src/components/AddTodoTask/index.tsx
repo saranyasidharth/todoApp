@@ -8,23 +8,26 @@ import styles from './index.module.css'
 
 export type TodoListType = { task: string; isCompleted: boolean }
 export default function AddTodoTask() {
-  
+
   const [title, setTitle] = useState<string>("");
   const [refreshList, setRefreshList] = useState<boolean>(false);
   const [viewTask, setViewTask] = useState(0);
 
-  const todo = useMemo(() => {
+  const todo: TodoListType[] = useMemo(() => {
     if (localStorage.getItem('todo') !== null) {
       return JSON.parse(localStorage.getItem('todo') ?? "");
     }
   }, [refreshList]);
 
   const handleAdd = () => {
-    localStorage.setItem(
-      "todo",
-      JSON.stringify([...(todo ? todo : []), { task: title, isCompleted: false }])
-    );
-    setRefreshList((v) => !v);
+    if (!todo || !todo.some(task => task.task === title)) {
+      localStorage.setItem(
+        "todo",
+        JSON.stringify([...(todo ? todo : []), { task: title, isCompleted: false }])
+      );
+      setRefreshList((v) => !v)
+        ;
+    }
   };
 
 

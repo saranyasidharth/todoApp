@@ -8,8 +8,6 @@
 .deleteIcon {
     cursor: pointer;
     align-items: flex-end;
-    /* Align the list section to the right end */
-
 }
 
 .listSection {
